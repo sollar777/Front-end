@@ -57,9 +57,11 @@ export class CadastroComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
+    /* verificando os campos que deixam de ter foco para passar para a variavel controlBlurs */
     let controlBlurs: Observable<any>[] = this.formInputElements
       .map((formControl: ElementRef) => fromEvent(formControl.nativeElement, 'blur'));
 
+      /* adiciona na variavel displayMessage os campo que perderam foco e diz se esta invalido ou nao com a funcao genericValidation()*/
       merge(...controlBlurs).subscribe(() => {
         this.displayMessage = this.genericValidation.processarMensagens(this.cadastroForm);
       });
@@ -67,6 +69,7 @@ export class CadastroComponent implements OnInit, AfterViewInit {
   }
 
   adicionarConta(){
+    /** Verifica se o formGroup que é o form esta sujo e se esta valido para passar os valores dos campos para a variavel usuario para realziar o cadastro*/
     if (this.cadastroForm.dirty && this.cadastroForm.valid){
       this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
 

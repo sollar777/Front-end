@@ -16,7 +16,8 @@
         <div class="form-group">
             <label class="col-md-2 control-label">E-mail</label>
             <div class="col-md-10">
-                <input class="form-control" id="email" type="text" placeholder="E-mail (requerido)" formControlName="email" [ngClass]="{'is-invalid': displayMessage.email }">
+                <input class="form-control" id="email" type="text" placeholder="E-mail (requerido)" 
+                    formControlName="email"  [ngClass]="{'is-invalid': displayMessage.email }">
                 <span class="text-danger" *ngIf="displayMessage.email">
                     <p [innerHTML]="displayMessage.email"></p>
                 </span>
@@ -26,7 +27,8 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Senha</label>
             <div class="col-md-10">
-                <input class="form-control" id="password" type="password" placeholder="Senha (requerida)" formControlName="password" [ngClass]="{'is-invalid': displayMessage.password }">
+                <input class="form-control" id="password" type="password" placeholder="Senha (requerida)" 
+                    formControlName="password" [ngClass]="{'is-invalid': displayMessage.password }">
                 <span class="text-danger" *ngIf="displayMessage.password">
                     <p [innerHTML]="displayMessage.password"></p>
                 </span>
@@ -36,7 +38,8 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Confime a senha</label>
             <div class="col-md-10">
-                <input class="form-control" id="confirmPassword" type="password" placeholder="Confirme a senha" formControlName="confirmPassword" [ngClass]="{'is-invalid': displayMessage.confirmPassword }">
+                <input class="form-control" id="confirmPassword" type="password" placeholder="Confirme a senha" 
+                    formControlName="confirmPassword" [ngClass]="{'is-invalid': displayMessage.confirmPassword }">
                 <span class="text-danger" *ngIf="displayMessage.confirmPassword">
                     <p [innerHTML]="displayMessage.confirmPassword"></p>
                 </span>
