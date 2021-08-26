@@ -4,7 +4,7 @@ import { throwError } from "rxjs";
 
 export abstract class BaseService {
     
-    protected UrlServiceV1: string = "http://localhost:5001";
+    protected UrlServiceV1: string = "https://localhost:44303/api/";
 
     protected ObterHeaderJson() {
         return {
